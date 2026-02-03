@@ -1,4 +1,4 @@
-name = "my-worker"
+name = "sd-maint-test"
 compatibility_date = "2026-02-03"
 
 [assets]
