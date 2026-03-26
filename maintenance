@@ -1,2 +1,36 @@
-status: yes
-message: We are expecting this maintenance window to last until 9:00pm PST
+status: no
+# message: 9:00pm PST
+
+# ------------------------------------------------------------------
+# MAINTENANCE STATUS FILE
+# Served at: https://maint-test.worldpac.com/maintenance
+# ------------------------------------------------------------------
+#
+# HOW TO USE (remove comments when placing at begining of file)
+# ----------
+# To activate maintenance mode, swap the two lines at the top:
+#
+# status: yes
+# message: 9:00pm PST
+#
+# To deactivate, swap back:
+#
+# status: no
+# # message: 9:00pm PST
+#
+# KEYS
+# ----
+# status — Required. "yes" shows the maintenance page. Anything else passes through.
+# message — Optional. Displayed as the estimated return time on the maintenance page.
+# If omitted or commented out, the page will say "as soon as possible".
+# Colons in the value are safe (e.g. "9:00pm PST" works fine).
+#
+# NOTES
+# -----
+# - Only the first occurrence of each key is used. Duplicates are ignored.
+# - Lines beginning with # are comments and are ignored by the parser.
+# - The message line can stay in the file at all times — it is only
+# displayed when status is "yes".
+# - There is no need to restart or redeploy the worker after editing
+# this file. Changes take effect on the next request.
+# ------------------------------------------------------------------
